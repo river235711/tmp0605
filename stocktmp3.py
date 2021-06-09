@@ -5,6 +5,7 @@ import numpy as np
 import json
 import requests
 import os.path
+#test#
 def Get_Stock3big(stockNoFind,Date):
     if not os.path.isfile("./stocktmp3.rawdata/3big_"+Date+".txt"):
         url = f'https://www.twse.com.tw/fund/T86?response=json&date={Date}&selectType=ALL&'
