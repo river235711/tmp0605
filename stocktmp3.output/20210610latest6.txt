@@ -1,0 +1,4 @@
+[  stockNo     sum3big      stockName
+7    2330  12062227.0  台積電          , 0.10848,    stockNo    sum3big      stockName
+35    2454  2871309.0  聯發科          , 0.08934,   stockNo     sum3big       stockName
+9    2002  10350971.0  中鋼            , 0.06921]

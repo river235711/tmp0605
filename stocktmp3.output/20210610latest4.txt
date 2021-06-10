@@ -1,0 +1,11 @@
+[  stockNo     sum3big      stockName
+7    2330  12062227.0  台積電          , 0.23486,     stockNo    sum3big     stockName
+126    0050  1171598.0  元大台灣50      , 0.2665,       stockNo   sum3big      stockName
+11292  006208 -512754.0  富邦台50        , 0.21112,    stockNo    sum3big      stockName
+35    2454  2871309.0  聯發科          , 0.36518,       stockNo    sum3big       stockName
+11634    2603 -5123278.0  長榮            , 0.00425,       stockNo    sum3big       stockName
+11639    2609 -8046980.0  陽明            , 0.14512,    stockNo    sum3big       stockName
+57    1101  2013751.0  台泥            , 0.30084,   stockNo     sum3big       stockName
+9    2002  10350971.0  中鋼            , 0.09264,    stockNo    sum3big       stockName
+32    2610  3211674.0  華航            , 0.28848,   stockNo     sum3big      stockName
+3    2618  16186050.0  長榮航          , 0.33959]
