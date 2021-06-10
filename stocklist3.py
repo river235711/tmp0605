@@ -11,23 +11,23 @@ from sklearn.preprocessing import normalize
 
 
 def Get_Stock3bigCalcSlope(stockNo,dateList,slopeVth):
-    d=len(dateList)
     re_listy=[]
-    print("Day of 3big number slope and intercept:\n", dateList)
+    print(len(dateList), "Day of 3big number regression slope and intercept:\n"+str(dateList))
     for j in range(len(stockNo)):
         print("stock:",stockNo[j])
         regXList=[]
         regYList=[]
-        regXListNorm=[]
+        #regXListNorm=[]
         regYListNorm=[]
         listx=[]
         listy=[]
+        b=float()
         for i in range(len(dateList)):
                 if len(dateList)==i+1:
                     regYList.append(b)
                     regXList.append(i)
                     regYListNorm=normalize([regYList])
-                    regXListNorm=normalize([regXList])
+                    #regXListNorm=normalize([regXList])
                     slope, intercept, r_value, p_value, std_err = linregress(regXList,regYListNorm)
                     slope=("%.5f" %slope)
                     slope=float(slope)
@@ -35,8 +35,8 @@ def Get_Stock3bigCalcSlope(stockNo,dateList,slopeVth):
                     intercept=float(intercept)
                     print("slope:",slope,"intercept:",intercept)
                     break
-                a=0
-                b=0
+                a=0.0
+                b=0.0
                 listx,StockNoAll=stocktmp3.Get_Stock3big(stockNo[j],dateList[i])
                 listy,StockNoAll=stocktmp3.Get_Stock3big(stockNo[j],dateList[i+1])
                 a=float(listx['sum3big'])
@@ -53,13 +53,20 @@ def Get_Stock3bigCalcSlope(stockNo,dateList,slopeVth):
     return re_listy
 
 if __name__ == '__main__':
-    #dateList=['20210601','20210602','20210603','20210604','20210607','20210608','20210609','20210610']
-    dateList=['20210603','20210604','20210607','20210608','20210609','20210610']
-    stockNo=['0050','2330','006208','2609','2603']
+    dateList=['20210601',
+              '20210602',
+              '20210603',
+              '20210604',
+              '20210607',
+              '20210608',
+              '20210609',
+              '20210610']
+    
+    stockNo=['2330','0050','006208','2454','2603','2609','1101','2002','2610','2618']
     slopeVth=0
     #listtmp, stockNoAll=stocktmp3.Get_Stock3big('2330',dateList[0])
     #stockNoAllList=stockNoAll.values.tolist()
-    data=Get_Stock3bigCalcSlope(stockNo,dateList,slopeVth)
+    data=Get_Stock3bigCalcSlope(stockNo,dateList[-4:],slopeVth)
     for list in data:
         print("Result: 3big normed slope >",slopeVth)
         print(list)
